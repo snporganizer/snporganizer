@@ -1,0 +1,2 @@
+module SnPsHelper
+end

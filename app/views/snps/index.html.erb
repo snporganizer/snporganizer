@@ -1,0 +1,27 @@
+<h1>Listing snps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rs number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @snps.each do |snp| %>
+      <tr>
+        <td><%= snp.rs_number %></td>
+        <td><%= link_to 'Show', snp %></td>
+        <td><%= link_to 'Edit', edit_snp_path(snp) %></td>
+        <td><%= link_to 'Destroy', snp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Snp', new_snp_path %>

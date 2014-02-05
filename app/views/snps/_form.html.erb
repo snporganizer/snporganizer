@@ -1,0 +1,21 @@
+<%= form_for(@snp) do |f| %>
+  <% if @snp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@snp.errors.count, "error") %> prohibited this snp from being saved:</h2>
+
+      <ul>
+      <% @snp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rs_number %><br>
+    <%= f.text_field :rs_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
